@@ -1,0 +1,96 @@
+.todo {
+    min-height: 74vh;
+    max-height: auto;
+    width: 100%;
+    position: relative;
+
+}
+  .todo-main {
+    margin-top: 80px; /* Adjust according to your navbar height */
+  }
+  
+  .todo-inputs-div {
+    width: 500px; /* ya jo bhi ideal width chahiye */
+    max-width: 90%; /* responsive bana ke liye */
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    background-color: white;
+  }
+  
+  .todo-inputs {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  #textarea {
+    display: none;
+    transition: all 0.3s ease;
+  }
+  
+  #textarea.show {
+    display: block;
+  }
+  
+  .home-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-btn:hover {
+    background-color: #357abd;
+  }
+  .icon-style {
+    background-color: white;
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #183f63;
+  }
+  
+  .icon-style:hover {
+    background-color:#dce9f3;
+    color: white;
+  }
+  
+  .icon-style:active {
+    transform: scale(0.95);
+    background-color: #dce9f3;
+  }
+  .todo-update{
+    width: 100%;
+    height: 80vh;
+    position :absolute;
+    position: fixed;
+    top:80px;
+    left:0px;
+    background-color:#9fbde0;
+    display: none;
+  }
+  .update{
+    height: 100%;
+  }.todo-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start; /* Align tasks from left */
+}
+
+.todo-card {
+  margin: 15px;
+  width: 350px; /* Adjust the width of the cards as needed */
+  /* Any other card styling you want */
+}
