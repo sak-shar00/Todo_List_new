@@ -1,7 +1,6 @@
 # Logs
 logs
 *.log
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -9,9 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+
+# Ignore dist-ssr folder but NOT dist (frontend build folder)
 dist-ssr
-*.local
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Remove dist from ignore so that build folder is included in git and deploy
+# dist
