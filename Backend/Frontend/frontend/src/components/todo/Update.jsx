@@ -33,7 +33,7 @@ const Update = ({ display, update, onUpdate }) => {
     try {
       const email = localStorage.getItem("userEmail");
       const response = await axios.put(
-        `http://localhost:5000/api/updatetask/${update._id}`,
+        `${window.location.origin}/api/updatetask/${update._id}`,
         {
           ...Inputs,
           email: email,

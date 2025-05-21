@@ -18,7 +18,7 @@ const Todo = () => {
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/gettask/${id}`);
+        const response = await axios.get(`${window.location.origin}/api/gettask/${id}`);
         setArray(response.data.tasks);
       } catch (error) {
         console.error("Error fetching tasks:", error);
@@ -46,7 +46,7 @@ const Todo = () => {
       return;
     }
     try {
-      const response = await axios.post("http://localhost:5000/api/addtask", {
+      const response = await axios.post(`${window.location.origin}/api/addtask`, {
         title: Inputs.title,
         body: Inputs.body,
         email: email
@@ -63,7 +63,7 @@ const Todo = () => {
 
   const del = async (taskId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/deletetask/${taskId}`, {
+      const response = await axios.delete(`${window.location.origin}/api/deletetask/${taskId}`, {
         data: { email: email }
       });
 
